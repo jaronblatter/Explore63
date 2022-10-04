@@ -2,8 +2,8 @@
 <div id="app">
   <div class="header">
     <div class="brand">
-      <h1>Pagliaccio</h1>
-      <h2>Ticket System</h2>
+      <h1>Explore63</h1>
+      <h2>Reservation system</h2>
     </div>
   </div>
   <div class="content">
