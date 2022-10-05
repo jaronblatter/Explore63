@@ -13,10 +13,15 @@ app.use(bodyParser.urlencoded({
 }));
 
 // connect to the mongodb database
-mongoose.connect('mongodb://localhost:27017/explore63', {
+mongoose.connect('mongodb://localhost:27017/pagliaccio', {
   useUnifiedTopology: true,
   useNewUrlParser: true
 });
 
+// import the users module and setup its API path
+const users = require("./users.js");
+app.use("/api/users", users.routes);
+
 // listen on port 3000
 app.listen(3000, () => console.log('Server listening on port 3000!'));
+

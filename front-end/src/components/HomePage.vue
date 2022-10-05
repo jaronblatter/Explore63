@@ -1,3 +1,4 @@
+
 <template>
   <div class="hero">
     <div class="heroBox">
@@ -51,7 +52,28 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
+    methods: {
+    async register() {
+      this.error = '';
+      this.errorLogin = '';
+      if (!this.firstName || !this.lastName || !this.username || !this.password)
+        return;
+      try {
+        let response = await axios.post('/api/users', {
+          firstName: this.firstName,
+          lastName: this.lastName,
+          username: this.username,
+          password: this.password,
+        });
+        this.$root.$data.user = response.data.user;
+      } catch (error) {
+        this.error = error.response.data.message;
+        this.$root.$data.user = null;
+      }
+    }
+  },
   name: "HomePage",
   data() {
     return {
@@ -65,6 +87,22 @@ export default {
       errorLogin: "",
     };
   },
+  async login() {
+   this.error = '';
+   this.errorLogin = '';
+   if (!this.usernameLogin || !this.passwordLogin)
+     return;
+   try {
+     let response = await axios.post('/api/users/login', {
+       username: this.usernameLogin,
+       password: this.passwordLogin,
+     });
+     this.$root.$data.user = response.data.user;
+   } catch (error) {
+     this.errorLogin = "Error: " + error.response.data.message;
+     this.$root.$data.user = null;
+   }
+ }
 };
 </script>
 
