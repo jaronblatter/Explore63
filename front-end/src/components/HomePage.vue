@@ -3,7 +3,7 @@
   <div class="hero">
     <div class="heroBox">
       <h1>Welcome to Explore63!</h1>
-      <p><img src="/decoration.png" /></p>
+      <hr class="rounded">
       <form class="pure-form">
         <fieldset>
           <legend>Register for an account</legend>
@@ -25,7 +25,7 @@
         </fieldset>
       </form>
       <p v-if="error" class="error">{{ error }}</p>
-      <p><img src="/decoration.png" /></p>
+      <hr class="rounded">
       <form class="pure-form">
         <fieldset>
           <legend>Login</legend>
@@ -112,6 +112,11 @@ h1 {
   font-variant: capitalize;
 }
 
+hr.rounded {
+  border-top: 3px solid #bbb;
+  border-radius: 5px;
+}
+
 .hero {
   padding: 30px;
   display: flex;
@@ -130,7 +135,7 @@ h1 {
 
 .hero::after {
   content: "";
-  background-image: url("/pagliacci.jpg");
+  background-image: url("/loginImage.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   top: 0;
