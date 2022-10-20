@@ -2,8 +2,19 @@
 <div id="app">
   <div class="header">
     <div class="brand">
-      <h1>Explore63</h1>
-      <h2>Reservation system</h2>
+      <div class="brand">
+        <h1>Explore63</h1>
+        <h2> RV Reservation system</h2>
+      </div>
+      <div class="about"> 
+        <h2>
+          <router-link class="pure-button-about" to="/about">About</router-link>
+          <router-link class="pure-button-about" to="/">Home</router-link>
+          <!-- <button class="pure-button-about">
+            About 
+          </button> -->
+        </h2>
+      </div>
     </div>
   </div>
   <div class="content">
@@ -26,11 +37,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 .brand {
   display: flex;
   background: #96ceb4;
-  padding: 10px 100px;
+  padding: 15px 15px;
 }
 
 .brand h1 {
@@ -39,6 +49,10 @@ body {
   padding: 10px;
   border-radius: 30px;
   font-size: 14px;
+}
+
+.about {
+  margin-left: auto;
 }
 
 .brand h2 {
@@ -53,6 +67,17 @@ body {
 
 .pure-button {
   font-size: 10px;
+}
+
+.pure-button-about {
+  font-size: 16px;
+  color: #333;
+  display: inline-block;
+  background: #DB9964;
+  text-align: right;clear:left;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: 14px;
 }
 
 h1 {
