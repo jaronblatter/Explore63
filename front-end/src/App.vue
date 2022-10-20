@@ -8,18 +8,18 @@
       </div>
       <div class="about"> 
         <h2>
-          <router-link class="pure-button-about" to="/about">About</router-link>
-          <router-link class="pure-button-about" to="/">Home</router-link>
-          <!-- <button class="pure-button-about">
-            About 
-          </button> -->
+          
+              <router-link class="pure-button-about" to="/about">About</router-link>
+            
+              <router-link class="pure-button-about" to="/">Home</router-link>
+
         </h2>
       </div>
     </div>
   </div>
-  <div class="content">
-    <router-view />
-  </div>
+ 
+  <router-view/>
+ 
 </div>
 </template>
 
@@ -29,6 +29,10 @@
 body {
   margin: 0px;
   background: #F7F5F7;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
 }
 
 #app {
@@ -43,6 +47,10 @@ body {
   padding: 15px 15px;
 }
 
+.spacer {
+  padding: 10px;
+}
+
 .brand h1 {
   display: inline-block;
   background: #DB9964;
@@ -51,14 +59,21 @@ body {
   font-size: 14px;
 }
 
-.about {
-  margin-left: auto;
+.about h2 {
+  display: inline-block;
+  background: #DB9964;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: 14px;
 }
 
-.brand h2 {
-  font-size: 12px;
+.h1 {
   padding: 10px;
-  margin-top: 12px;
+}
+
+.about {
+  margin-left: auto;
+
 }
 
 .main {
@@ -86,6 +101,7 @@ h1 {
 
 h2 {
   font-size: 12px;
+  padding: 10px;
 }
 
 .space-right {
